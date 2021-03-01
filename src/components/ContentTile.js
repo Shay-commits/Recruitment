@@ -1,10 +1,6 @@
 import React from "react";
 import { StyleSheet } from "react-native";
 import { Button, Card, Paragraph, Avatar } from "react-native-paper";
-<<<<<<< HEAD
-=======
-import DialogButton from "./Dialog";
->>>>>>> d52b7c1c607ab5ed6e126721ac2e1697c1b259f5
 
 export default function HeadlineItem(props) {
   // This component doesn't do anything when clicked (yet...)
@@ -27,7 +23,6 @@ export default function HeadlineItem(props) {
         </Paragraph>
       </Card.Content>
       <Card.Actions>
-<<<<<<< HEAD
         <Button
           mode="outlined"
           style={styles.button}
@@ -35,9 +30,6 @@ export default function HeadlineItem(props) {
         >
           Button 1
         </Button>
-=======
-        <DialogButton btnTitle="Button 1" dialogTitle="Alert" dialogContent="You have pressed button 1" btnStyle={styles.button}/>
->>>>>>> d52b7c1c607ab5ed6e126721ac2e1697c1b259f5
         <Button
           mode="outlined"
           style={styles.button}

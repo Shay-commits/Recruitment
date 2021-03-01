@@ -9,11 +9,7 @@ const SignUpScreen = function ({ signUp }) {
   const [email, setEmail] = useState("");
   return (
     <SafeAreaView style={styles.container}>
-<<<<<<< HEAD
       <Headline style={styles.title}> Enter your details</Headline>
-=======
-      <Headline style={styles.title}>Enter your details</Headline>
->>>>>>> d52b7c1c607ab5ed6e126721ac2e1697c1b259f5
       <Subheading style={styles.text}>Choose a username</Subheading>
       <TextInput
         label="Username"
@@ -69,10 +65,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   button: {
-<<<<<<< HEAD
     width: 130,
-=======
->>>>>>> d52b7c1c607ab5ed6e126721ac2e1697c1b259f5
     alignSelf: "center",
     marginVertical: 30,
   },

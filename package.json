@@ -2,7 +2,6 @@
   "main": "src/App.js",
   "name": "tech-vis-2021-app",
   "version": "1.0.0",
-<<<<<<< HEAD
   "repository": "https://innersource.accenture.com/scm/~laurene.coste/tech-vis-2021-app.git",
   "author": "Coste, Laurene <laurene.coste@accenture.com>",
   "scripts": {
@@ -11,12 +10,6 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject"
-=======
-  "repository": "",
-  "author": "Accenture",
-  "scripts": {
-    "start": "expo start --tunnel"
->>>>>>> d52b7c1c607ab5ed6e126721ac2e1697c1b259f5
   },
   "dependencies": {
     "@react-native-community/masked-view": "0.1.10",

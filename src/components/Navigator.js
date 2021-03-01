@@ -4,11 +4,7 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 import HomeScreen from "../screens/HomeScreen";
 import ContentScreen from "../screens/ContentScreen";
 import SignUpScreen from "../screens/SignUpScreen";
-<<<<<<< HEAD
 import { PlaceholderScreen } from "../screens/PlaceholderScreens";
-=======
-import SettingsScreen from "../screens/SettingsScreen";
->>>>>>> d52b7c1c607ab5ed6e126721ac2e1697c1b259f5
 import CommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import Icon from "react-native-vector-icons/Feather";
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
@@ -56,11 +52,7 @@ export default function () {
         />
         <Tab.Screen
           name="Settings"
-<<<<<<< HEAD
           component={PlaceholderScreen}
-=======
-          component={SettingsScreen}
->>>>>>> d52b7c1c607ab5ed6e126721ac2e1697c1b259f5
           options={{
             tabBarLabel: "Settings",
             tabBarIcon: ({ color }) => (
