@@ -17,7 +17,11 @@ If you're already comfortable with this type of development, you'll be able to s
 
 # Installation
 
+<<<<<<< HEAD
 This start point assumes you have successfully cloned the repository and are reading this from your Cloud9 IDE.
+=======
+This start point assumes you have successfully cloned the repository and are reading this from your Cloud9 IDE. You only need to run the instructions below once - if you've already done so as part of the IDE Set Up instructions, you can skip ahead.
+>>>>>>> d52b7c1c607ab5ed6e126721ac2e1697c1b259f5
 
 First, make sure you are using the right version of node. To do that, enter `nvm use node` into your terminal. You should see a message that starts like this: `Now using node`.
 
@@ -45,9 +49,14 @@ If you want to take a tour of the IDE: https://docs.aws.amazon.com/cloud9/latest
 
 ## Running the app
 
+<<<<<<< HEAD
 _TODO - to be updated based on use of Amplify or not and possible ssh instructions to get it to run properly in Cloud9 / Cloud9 browser preview. Maybe some instructions on what happens after yarn start and how they get to a preview?_
 
 To run the application in Cloud9, enter `yarn start` in the terminal.
+=======
+To run the application in Cloud9, enter `yarn start` in the terminal.
+Then make sure to scan the QR code with your phone (directly with the Expo Go app on android or through the camera on iPhone).
+>>>>>>> d52b7c1c607ab5ed6e126721ac2e1697c1b259f5
 
 ## Using Yarn
 
@@ -62,11 +71,19 @@ View the full documentation [here]('https://classic.yarnpkg.com/en/')
 
 If you're not familiar with JS development, or want to make sure you get a head start on how this app is structured, this section will walk you through the organisation of the code at a high level.
 
+<<<<<<< HEAD
 First, you can ignore the following folders:
+=======
+First, you can ignore the following folders & files:
+>>>>>>> d52b7c1c607ab5ed6e126721ac2e1697c1b259f5
 
 - `/.expo`
 - `/.expo-shared`
 - `/node_modules`
+<<<<<<< HEAD
+=======
+- `setup.sh`
+>>>>>>> d52b7c1c607ab5ed6e126721ac2e1697c1b259f5
 
 Second, the files that sit outside the `/src` folder might come in handy if you are looking to do any of the following:
 
@@ -146,10 +163,13 @@ Finally, you and your team can also choose to focus on other ways of presenting 
 - [AWS Cloud9](#aws-cloud9)
 - [Git and Git Panel](#git-and-git-panel)
 
+<<<<<<< HEAD
 _TODO_
 
 - amplify?
 
+=======
+>>>>>>> d52b7c1c607ab5ed6e126721ac2e1697c1b259f5
 ## React Native
 
 > React Native is an open-source mobile application framework enabling developers to create native apps for Android and iOS using React.
