@@ -34,7 +34,7 @@ export default function SettingsScreen() {
         <View style={styles.list}>
           <View>
             <Caption>OVERLINE</Caption>
-            <Text>Toggle 1</Text>
+            <Text> Dark Theme</Text>
           </View>
           <Switch onValueChange={toggleSwitch} value={isEnabled} />
         </View>

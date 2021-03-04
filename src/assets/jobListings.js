@@ -1,58 +1,9 @@
-import React from "react";
-import { StyleSheet, SafeAreaView, ScrollView } from "react-native";
-import { Headline } from "react-native-paper";
-import ContentTileNew from "../components/ContentTileNew";
-
-export default function ContentScreen() {
-  var headlines = [];
-  
-  
-
-  // Creating key values based on index for mock content
-  for (let i = 0; i <= jobListings.length; i++) {
-    headlines.push(<ContentTileNew key={i}  title={jobListings[i].title} description={jobListings[i].description}></ContentTileNew>);
-  }
-  return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView>
-        <Headline style={styles.heading}> Job Listings </Headline>
-        {headlines}
-      </ScrollView>
-    </SafeAreaView>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 5,
-  },
-  heading: {
-    marginTop: 30,
-    marginBottom: 10,
-    paddingHorizontal: 15,
-  },
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-let benfits = "At Accenture in addition to a competitive basic salary, you will also have an extensive benefits package which includes 25 days’ vacation per year, gym subsidy, private medical insurance and 3 extra days leave per year for charitable work of your choice! Flexibility and mobility are required to deliver this role as there will be requirements to spend time onsite with our clients and partners to enable delivery of the first-class services we are known for."
+let benefits = "At Accenture in addition to a competitive basic salary, you will also have an extensive benefits package which includes 25 days’ vacation per year, gym subsidy, private medical insurance and 3 extra days leave per year for charitable work of your choice! Flexibility and mobility are required to deliver this role as there will be requirements to spend time onsite with our clients and partners to enable delivery of the first-class services we are known for."
 
 let jobListings = [
 
 
-{
+{ id: "0",
   location: ["United Kingdom", "London"],
   title: "Software Engineer- Java",
   salary: "£47,500 - £65,000+ pa + Benefits (based on experience and level)",
@@ -81,7 +32,7 @@ let jobListings = [
 
 
 
-{
+{ id: "1",
   location: ["United Kingdom", "Edinburgh"],
   title: "Business Analyst",
   salary: "£25,000 - £55,000 (based on experience)",
@@ -107,7 +58,7 @@ let jobListings = [
 
 
 
-{
+{ id: "2",
   location: ["United Kingdom", "Manchester"],
   title: "Scrum Master",
   salary: "£36,000 - £50,000",
@@ -135,3 +86,5 @@ let jobListings = [
 
 
 ]
+
+export default jobListings

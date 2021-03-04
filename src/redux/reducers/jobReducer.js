@@ -1,58 +1,23 @@
-import React from "react";
-import { StyleSheet, SafeAreaView, ScrollView } from "react-native";
-import { Headline } from "react-native-paper";
-import ContentTileNew from "../components/ContentTileNew";
 
-export default function ContentScreen() {
-  var headlines = [];
-  
-  
 
-  // Creating key values based on index for mock content
-  for (let i = 0; i <= jobListings.length; i++) {
-    headlines.push(<ContentTileNew key={i}  title={jobListings[i].title} description={jobListings[i].description}></ContentTileNew>);
+const jobReducer = (state=[...jobListings], action) => {
+
+  switch (action.type) {
+  case 'INIT_BLOG':
+    return action.data
+    
+  default:
+    return state
   }
-  return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView>
-        <Headline style={styles.heading}> Job Listings </Headline>
-        {headlines}
-      </ScrollView>
-    </SafeAreaView>
-  );
+
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 5,
-  },
-  heading: {
-    marginTop: 30,
-    marginBottom: 10,
-    paddingHorizontal: 15,
-  },
-});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-let benfits = "At Accenture in addition to a competitive basic salary, you will also have an extensive benefits package which includes 25 days’ vacation per year, gym subsidy, private medical insurance and 3 extra days leave per year for charitable work of your choice! Flexibility and mobility are required to deliver this role as there will be requirements to spend time onsite with our clients and partners to enable delivery of the first-class services we are known for."
 
 let jobListings = [
 
 
-{
+{ id: "0",
   location: ["United Kingdom", "London"],
   title: "Software Engineer- Java",
   salary: "£47,500 - £65,000+ pa + Benefits (based on experience and level)",
@@ -81,7 +46,7 @@ let jobListings = [
 
 
 
-{
+{ id: "1",
   location: ["United Kingdom", "Edinburgh"],
   title: "Business Analyst",
   salary: "£25,000 - £55,000 (based on experience)",
@@ -107,7 +72,7 @@ let jobListings = [
 
 
 
-{
+{ id: "2",
   location: ["United Kingdom", "Manchester"],
   title: "Scrum Master",
   salary: "£36,000 - £50,000",
@@ -130,8 +95,55 @@ let jobListings = [
 },
 
 
+{
+  
+  id: "3",
+  location: ["United Kingdom", "Birmingham"],
+  title: "User Researcher",
+  salary:"£28,000 - £48,000",
+  careerLevel: "(Accenture will be recruiting at the following levels: Senior Analyst, Consultant)",
+  description: "Accenture is a leading global professional services company, providing a broad range of services in strategy and consulting, interactive, technology and operations, with digital capabilities across all of these services. With our thought leadership and culture of innovation, we apply industry expertise, diverse skill sets and next-generation technology to each business challenge. We believe in inclusion and diversity and supporting the whole person. Our core values comprise of Stewardship, Best People, Client Value Creation, One Global Network, Respect for the Individual and Integrity. Year after year, Accenture is recognized worldwide not just for business performance but for inclusion and diversity too. “Across the globe, one thing is universally true of the people of Accenture: We care deeply about what we do and the impact we have with our clients and with the communities in which we work and live. It is personal to all of us.” – Julie Sweet, Accenture CEO As a User Researcher you will work with a team of creative and passionate UX Design specialists who are responsible for creating user-centred designs for digital products and services. This is a great opportunity to work across multiple different clients in a range of industries. As a member of our close-knit UX and Design team, you will champion the value of User-Centred Design across all products and services as part of delivery best practice.  ",
+  timePosted: "6 days ago ",
+  qualifications: {
+    main: ["Demonstrable experience as a Scrum Master",
+"Deep understanding of Scrum theory, practices and values",
+"A detailed understanding of, and practical experience with, IT Delivery",
+"Experience of working within both Waterfall and Agile environments",
+"Experience using Atlassian tools (JIRA, Confluence)",
+"Exposure to Scaled Agile Methodologies (SAFe, Nexus, LeSS or similar)"],
+    difference: ["Scrum Master Certification (CSM, PSM or similar) will be highly regarded",
+"Experience with Swift Messaging Hub, Config/Integration Build, Apigee, API Management, Creation & Control, API Gateway"]
+  },
+  
+  closing: "30/09/2021" },
+  
+  {
+  
+  id: "4",
+  location: ["United Kingdom", "Manchester"],
+  title: "Software Engineer - FullStack",
+  salary:"Salary: £47,500- £75,000 pa + Benefits (based on experience and level)",
+  careerLevel: "(Accenture will be recruiting at the following levels: Senior Analyst, Consultant)",
+  description: "Accenture is a leading global professional services company, providing a broad range of services in strategy and consulting, interactive, technology and operations, with digital capabilities across all of these services. With our thought leadership and culture of innovation, we apply industry expertise, diverse skill sets and next-generation technology to each business challenge. We believe in inclusion and diversity and supporting the whole person. Our core values comprise of Stewardship, Best People, Client Value Creation, One Global Network, Respect for the Individual and Integrity. Year after year, Accenture is recognized worldwide not just for business performance but for inclusion and diversity too. “Across the globe, one thing is universally true of the people of Accenture: We care deeply about what we do and the impact we have with our clients and with the communities in which we work and live. It is personal to all of us.” – Julie Sweet, Accenture CEO As a User Researcher you will work with a team of creative and passionate UX Design specialists who are responsible for creating user-centred designs for digital products and services. This is a great opportunity to work across multiple different clients in a range of industries. As a member of our close-knit UX and Design team, you will champion the value of User-Centred Design across all products and services as part of delivery best practice.  ",
+  timePosted: "6 days ago ",
+  qualifications: {
+    main: ["Demonstrable experience as a Scrum Master",
+"Deep understanding of Scrum theory, practices and values",
+"A detailed understanding of, and practical experience with, IT Delivery",
+"Experience of working within both Waterfall and Agile environments",
+"Experience using Atlassian tools (JIRA, Confluence)",
+"Exposure to Scaled Agile Methodologies (SAFe, Nexus, LeSS or similar)"],
+    difference: ["Scrum Master Certification (CSM, PSM or similar) will be highly regarded",
+"Experience with Swift Messaging Hub, Config/Integration Build, Apigee, API Management, Creation & Control, API Gateway"]
+  },
+  
+  closing: "30/04/2021" },
+  
 
 
 
 
 ]
+
+
+export default jobReducer 

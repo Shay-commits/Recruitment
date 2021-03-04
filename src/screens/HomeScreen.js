@@ -1,20 +1,31 @@
 import React, { Fragment } from "react";
 import { Headline, Subheading, List, Divider } from "react-native-paper";
 import { StyleSheet, SafeAreaView, ScrollView } from "react-native";
-import { connect } from "react-redux";
+import { useSelector, useDispatch, connect } from 'react-redux';
 
-const HomeScreen = function ({ data }) {
+const HomeScreen = function () {
   // Notice the static content. Could you use the store to make your content more dynamic?
+  
+ const userDatas = useSelector(state=> state.userReducer);
+
+ 
+ const userData = userDatas[0].applications;
+ 
+ const userBook = userDatas[0].bookmarks;
+ console.log(userBook)
+
+ 
+ 
 
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scrollView}>
-        <Headline style={styles.heading}>Welcome User1</Headline>
+        <Headline style={styles.heading}> Welcome Back Ike </Headline>
         <Subheading style={styles.subheading}>
-          Some subheading text here...
+          Your Applications
         </Subheading>
-        {data.length ? (
-          data.map((item) => {
+        {userData.length ? (
+          userData.map((item) => {
             return (
               <Fragment key={item.id}>
                 <List.Accordion
@@ -27,8 +38,39 @@ const HomeScreen = function ({ data }) {
                   <List.Item
                     style={styles.listItem}
                     titleStyle={styles.listItemTitle}
-                    title={item.subtitle}
-                    description={item.body}
+                    title={`Application Status: ${item.status}`}
+                    description={`Feedback Score: ${item.feedback}`}
+                    descriptionNumberOfLines={5}
+                  />
+                </List.Accordion>
+                <Divider />
+              </Fragment>
+            );
+          })
+        ) : (
+          <Subheading style={styles.subheading}>Loading...</Subheading>
+        )}
+        
+        
+        <Subheading style={styles.subheading}>
+          Saved Jobs
+        </Subheading>
+        {userBook.length ? (
+          userBook.map((item) => {
+            return (
+              <Fragment key={item.id}>
+                <List.Accordion
+                  title={item.title}
+                  style={styles.accordion}
+                  left={(props) => (
+                    <List.Icon {...props} icon="newspaper-variant-outline" />
+                  )}
+                >
+                  <List.Item
+                    style={styles.listItem}
+                    titleStyle={styles.listItemTitle}
+                    title={`Salary: ${item.salary}`}
+                    description={`Description: ${item.careerLevel}`}
                     descriptionNumberOfLines={5}
                   />
                 </List.Accordion>
@@ -68,6 +110,7 @@ const styles = StyleSheet.create({
   subheading: {
     paddingBottom: 5,
     paddingHorizontal: 15,
+    marginTop: 20,
   },
 
   accordion: {

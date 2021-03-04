@@ -1,9 +1,13 @@
 import React from "react";
-import { Provider as PaperProvider } from "react-native-paper";
+import { DarkTheme as PaperDarkTheme, DefaultTheme as PaperDefaultTheme, Provider as PaperProvider } from "react-native-paper";
 import store from "./redux/store";
 import { Provider } from "react-redux";
 import { registerRootComponent } from "expo";
 import Navigator from "./components/Navigator";
+
+
+
+
 
 /* This is the root component for your app.
  * The Provider component makes the redux store available for nested child components.
@@ -15,7 +19,7 @@ class App extends React.Component {
     return (
       <Provider store={store}>
         <PaperProvider>
-          <Navigator />
+          <Navigator  />
         </PaperProvider>
       </Provider>
     );
